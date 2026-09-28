@@ -1,6 +1,6 @@
 # Roadmap — whaleshell-sdk
 
-Status: **v0.1.0-alpha.1** (alpha) · Talks to [whaleshell-gateway](https://github.com/whaleshell/whaleshell-gateway)
+Status: **v0.1.0-alpha.2** (alpha) · Talks to [whaleshell-gateway](https://github.com/whaleshell/whaleshell-gateway)
 
 ## This module
 
