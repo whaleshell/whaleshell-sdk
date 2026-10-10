@@ -1,15 +1,15 @@
-# Roadmap — cauteum-sdk
+# Roadmap — cautem-sdk
 
-Status: **v0.1.4** (stable numbered release) · Talks to [cauteum-gateway](https://github.com/cauteum-haven/cauteum-gateway)
+Status: **v0.1.6** (stable numbered release) · Talks to [cautem-gateway](https://github.com/cautem/cautem-gateway)
 
 ## This module
 
 | ID | Item | Notes |
 |----|------|-------|
 | S1 | **API coverage** | Proposals, providers, effective-policy helpers |
-| S2 | **Stable client surface** | Freeze `go/cauteum` for alpha consumers |
+| S2 | **Stable client surface** | Freeze `go/cautem` for alpha consumers |
 | S3 | **Examples** | Minimal create/list/exec snippets in README |
 
 ## Release
 
-Leaf-ish module (no cauteum-* Go requires) · can tag with core wave.
+Leaf-ish module (no cautem-* Go requires) · can tag with core wave.

@@ -1,4 +1,4 @@
-# SPDX-FileCopyrightText: Copyright (c) 2026 the cauteum authors
+# SPDX-FileCopyrightText: Copyright (c) 2026 the cautem authors
 # SPDX-License-Identifier: Apache-2.0
 #
 # gogpu-style CI: format, lint, cross-platform build + test
@@ -33,9 +33,9 @@ jobs:
       - name: Checkout Control API dependency
         uses: actions/checkout@v4
         with:
-          repository: cautem/cauteum-gateway
-          path: cauteum-gateway
-          ref: ca604feb393719a50a5521881e7bfd9a60231042
+          repository: cautem/cautem-gateway
+          path: cautem-gateway
+          ref: v0.1.6
 
       - name: Configure Go workspace
         shell: bash
@@ -45,10 +45,10 @@ jobs:
 
           use (
             .
-            ./cauteum-gateway
+            ./cautem-gateway
           )
 
-          replace github.com/cautem/cauteum-gateway v0.1.5 => ./cauteum-gateway
+          replace github.com/cautem/cautem-gateway v0.1.6 => ./cautem-gateway
           EOF
 
       - uses: actions/setup-go@v5
@@ -80,9 +80,9 @@ jobs:
       - name: Checkout Control API dependency
         uses: actions/checkout@v4
         with:
-          repository: cautem/cauteum-gateway
-          path: cauteum-gateway
-          ref: ca604feb393719a50a5521881e7bfd9a60231042
+          repository: cautem/cautem-gateway
+          path: cautem-gateway
+          ref: v0.1.6
 
       - name: Configure Go workspace
         shell: bash
@@ -92,10 +92,10 @@ jobs:
 
           use (
             .
-            ./cauteum-gateway
+            ./cautem-gateway
           )
 
-          replace github.com/cautem/cauteum-gateway v0.1.5 => ./cauteum-gateway
+          replace github.com/cautem/cautem-gateway v0.1.6 => ./cautem-gateway
           EOF
 
       - uses: actions/setup-go@v5
@@ -127,9 +127,9 @@ jobs:
       - name: Checkout Control API dependency
         uses: actions/checkout@v4
         with:
-          repository: cautem/cauteum-gateway
-          path: cauteum-gateway
-          ref: ca604feb393719a50a5521881e7bfd9a60231042
+          repository: cautem/cautem-gateway
+          path: cautem-gateway
+          ref: v0.1.6
 
       - name: Configure Go workspace
         shell: bash
@@ -139,10 +139,10 @@ jobs:
 
           use (
             .
-            ./cauteum-gateway
+            ./cautem-gateway
           )
 
-          replace github.com/cautem/cauteum-gateway v0.1.5 => ./cauteum-gateway
+          replace github.com/cautem/cautem-gateway v0.1.6 => ./cautem-gateway
           EOF
 
       - uses: actions/setup-go@v5
@@ -172,9 +172,9 @@ jobs:
       - name: Checkout Control API dependency
         uses: actions/checkout@v4
         with:
-          repository: cautem/cauteum-gateway
-          path: cauteum-gateway
-          ref: ca604feb393719a50a5521881e7bfd9a60231042
+          repository: cautem/cautem-gateway
+          path: cautem-gateway
+          ref: v0.1.6
 
       - name: Configure Go workspace
         shell: bash
@@ -184,10 +184,10 @@ jobs:
 
           use (
             .
-            ./cauteum-gateway
+            ./cautem-gateway
           )
 
-          replace github.com/cautem/cauteum-gateway v0.1.5 => ./cauteum-gateway
+          replace github.com/cautem/cautem-gateway v0.1.6 => ./cautem-gateway
           EOF
 
       - uses: actions/setup-go@v5
@@ -220,7 +220,7 @@ jobs:
         uses: codecov/codecov-action@v5
         with:
           use_oidc: true
-          files: ./cauteum-sdk/coverage.txt
+          files: ./cautem-sdk/coverage.txt
           flags: unittests
-          name: codecov-cauteum-sdk
+          name: codecov-cautem-sdk
           fail_ci_if_error: false

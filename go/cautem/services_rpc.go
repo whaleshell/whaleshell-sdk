@@ -1,11 +1,11 @@
-package cauteum
+package cautem
 
 import (
 	"context"
 	"fmt"
 
 	openshell "github.com/NVIDIA/OpenShell/sdk/go/openshell/v1"
-	gc "github.com/cautem/cauteum-sdk/internal/gatewayclient"
+	gc "github.com/cautem/cautem-sdk/internal/gatewayclient"
 )
 
 // ExposeService registers a sandbox service through the pinned OpenShell RPC.

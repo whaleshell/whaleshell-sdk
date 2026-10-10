@@ -1,4 +1,4 @@
-package cauteum
+package cautem
 
 import (
 	"context"
@@ -11,13 +11,13 @@ import (
 
 	openshell "github.com/NVIDIA/OpenShell/sdk/go/openshell/v1"
 	opentypes "github.com/NVIDIA/OpenShell/sdk/go/openshell/v1/types"
-	gc "github.com/cautem/cauteum-sdk/internal/gatewayclient"
+	gc "github.com/cautem/cautem-sdk/internal/gatewayclient"
 	"google.golang.org/grpc/codes"
 	"google.golang.org/grpc/status"
 )
 
 const defaultWorkspace = "default"
-const runtimeCredentialsAnnotation = "cauteum.io/runtime-credentials"
+const runtimeCredentialsAnnotation = "cautem.io/runtime-credentials"
 
 // ListProviders lists provider metadata through the pinned OpenShell contract.
 // Credential values are never copied into the public SDK record.
@@ -57,7 +57,7 @@ func (c *Client) PutProvider(ctx context.Context, record ProviderRecord) error {
 		return fmt.Errorf("provider name and type are required")
 	}
 	// OpenShell Provider.Update replaces the credential map. Use the narrow
-	// Cauteum RPC for a partial patch so old secret values never need to be
+	// cautem RPC for a partial patch so old secret values never need to be
 	// read or sent back by the client.
 	if !sameCredentialKeys(record.EnvVars, record.Credentials) {
 		return c.UpdateProviderCredentials(ctx, record.Workspace, record.Name, record.Credentials)

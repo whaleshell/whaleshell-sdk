@@ -1,4 +1,4 @@
-// Package gatewayclient talks to cauteum-gateway HTTP API.
+// Package gatewayclient talks to cautem-gateway HTTP API.
 package gatewayclient
 
 import (
@@ -38,7 +38,7 @@ type CredentialBindings = map[string]string
 // CredentialExpiry maps credential keys to Unix millisecond expiration times.
 type CredentialExpiry = map[string]int64
 
-// Client is a tiny HTTP client for cauteum-gateway.
+// Client is a tiny HTTP client for cautem-gateway.
 type Client struct {
 	Base  string
 	Token string // optional Bearer

@@ -1,15 +1,15 @@
-// Package cauteum is the Go SDK for the cauteum gateway control plane.
+// Package cautem is the Go SDK for the cautem gateway control plane.
 //
 // RPC methods authenticate with a bearer token (OIDC access token or the
 // local-dev token from `<gateway data dir>/auth_token`). New picks up
-// CAUTEUM_GATEWAY_TOKEN; NewWithToken sets it explicitly. Resource facades
-// use OpenShell or Cauteum RPC. Health and local auth bootstrap remain HTTP;
+// CAUTEM_GATEWAY_TOKEN; NewWithToken sets it explicitly. Resource facades
+// use OpenShell or cautem RPC. Health and local auth bootstrap remain HTTP;
 // CLI-managed sandbox registry operations use a dedicated Control RPC surface.
 //
 // Exec runs over the pinned OpenShell ExecSandbox gRPC method.
 // Interactive sessions and IDE access use SSH sessions: CreateSSHSession plus
-// `cauteum ssh-proxy` / `cauteum sandbox connect`.
-package cauteum
+// `cautem ssh-proxy` / `cautem sandbox connect`.
+package cautem
 
 import (
 	"context"
@@ -20,20 +20,20 @@ import (
 	"sync"
 
 	openshell "github.com/NVIDIA/OpenShell/sdk/go/openshell/v1"
-	gc "github.com/cautem/cauteum-sdk/internal/gatewayclient"
+	gc "github.com/cautem/cautem-sdk/internal/gatewayclient"
 	"google.golang.org/grpc"
 )
 
 // EnvToken is the default bearer for New.
-const EnvToken = "CAUTEUM_GATEWAY_TOKEN"
+const EnvToken = "CAUTEM_GATEWAY_TOKEN"
 
 // ErrConnectUnsupported means interactive sessions stay on the CLI.
-var ErrConnectUnsupported = errors.New("cauteum-sdk: interactive connect is not supported; use: cauteum sandbox connect <name>")
+var ErrConnectUnsupported = errors.New("cautem-sdk: interactive connect is not supported; use: cautem sandbox connect <name>")
 
 // ErrSandboxNotReady is returned when the sandbox supervisor relay is not connected.
 var ErrSandboxNotReady = gc.ErrSandboxNotReady
 
-// Client exposes curated OpenShell and Cauteum RPC methods plus explicit bootstrap HTTP calls.
+// Client exposes curated OpenShell and cautem RPC methods plus explicit bootstrap HTTP calls.
 type Client struct {
 	http  *gc.Client
 	base  string
@@ -54,7 +54,7 @@ func (c *Client) workspace() string {
 }
 
 // New builds a client for a gateway base URL (e.g. http://127.0.0.1:7443),
-// authenticated with $CAUTEUM_GATEWAY_TOKEN when set.
+// authenticated with $CAUTEM_GATEWAY_TOKEN when set.
 func New(baseURL string) *Client {
 	return NewWithToken(baseURL, os.Getenv(EnvToken))
 }
@@ -85,7 +85,7 @@ func (c *Client) Close() error {
 	return closeErr
 }
 
-// Stable type aliases for Cauteum gateway resources.
+// Stable type aliases for cautem gateway resources.
 type (
 	Labels                = gc.Labels
 	Credentials           = gc.Credentials

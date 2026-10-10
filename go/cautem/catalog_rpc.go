@@ -1,4 +1,4 @@
-package cauteum
+package cautem
 
 import (
 	"context"
@@ -6,8 +6,8 @@ import (
 	"sort"
 	"time"
 
-	controlv1 "github.com/cautem/cauteum-gateway/api/gen/cauteum/control/v1"
-	gc "github.com/cautem/cauteum-sdk/internal/gatewayclient"
+	controlv1 "github.com/cautem/cautem-gateway/api/gen/cautem/control/v1"
+	gc "github.com/cautem/cautem-sdk/internal/gatewayclient"
 )
 
 // TemplateRecord is the caller-visible catalog view of a sandbox template.
