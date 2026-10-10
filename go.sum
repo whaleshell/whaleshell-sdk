@@ -1,7 +1,7 @@
 github.com/NVIDIA/OpenShell/sdk/go v0.0.0-20260909233434-a0814443f19c h1:UPhoAjInjoFIAkCBEFKrFi7mAc6EBrZJl8+bo9D/0Bg=
 github.com/NVIDIA/OpenShell/sdk/go v0.0.0-20260909233434-a0814443f19c/go.mod h1:zdG7v32UKU9U/zMxJ5F/nFRtUOpCUf0R6yu7k+adbxo=
-github.com/cautem/cauteum-gateway v0.1.5 h1:XOn6EidKBA11GrvE62CM6cTVubsgIhmaQnYZV2wUF3Y=
-github.com/cautem/cauteum-gateway v0.1.5/go.mod h1:vbtesO7LhH4QBDHD4DOHXj/HQnOG0pUV7dx+OTRI3/o=
+github.com/cautem/cautem-gateway v0.1.5 h1:XOn6EidKBA11GrvE62CM6cTVubsgIhmaQnYZV2wUF3Y=
+github.com/cautem/cautem-gateway v0.1.5/go.mod h1:vbtesO7LhH4QBDHD4DOHXj/HQnOG0pUV7dx+OTRI3/o=
 github.com/davecgh/go-spew v1.1.1 h1:vj9j/u1bqnvCEfJOwUhtlOARqs3+rkHYY13jYWTU97c=
 github.com/davecgh/go-spew v1.1.1/go.mod h1:J7Y8YcW2NihsgmVo/mv3lAwl/skON4iLHjSsI+c5H38=
 github.com/golang/protobuf v1.5.4 h1:i7eJL8qZTpSEXOPTxNKhASYpMn+8e5Q6AdndVa1dWek=

@@ -1,4 +1,4 @@
-package cauteum
+package cautem
 
 import (
 	"context"
@@ -9,7 +9,7 @@ import (
 	"sync"
 	"time"
 
-	controlv1 "github.com/cautem/cauteum-gateway/api/gen/cauteum/control/v1"
+	controlv1 "github.com/cautem/cautem-gateway/api/gen/cautem/control/v1"
 )
 
 // ControlOverview returns caller-visible gateway summary data through the

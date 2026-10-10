@@ -1,10 +1,10 @@
-package cauteum
+package cautem
 
 import (
 	"context"
 	"fmt"
 
-	controlv1 "github.com/cautem/cauteum-gateway/api/gen/cauteum/control/v1"
+	controlv1 "github.com/cautem/cautem-gateway/api/gen/cautem/control/v1"
 )
 
 // SyncManagedSandbox registers or updates metadata for a CLI-owned runtime.
@@ -43,7 +43,7 @@ func (c *Client) GetManagedSandbox(ctx context.Context, name string) (Sandbox, e
 	return Sandbox{Name: item.GetName(), ID: item.GetRuntimeId(), Image: item.GetImage(), Workspace: item.GetWorkspace(), Network: item.GetNetwork(), Status: item.GetStatus(), Labels: item.GetLabels(), BasePolicyYAML: item.GetBasePolicyYaml(), AttachedProviders: item.GetAttachedProviders(), ResourceVersion: item.GetResourceVersion()}, nil
 }
 
-// DeleteManagedSandbox removes the Cauteum registry entry after the CLI has
+// DeleteManagedSandbox removes the cautem registry entry after the CLI has
 // already stopped and deleted the external runtime.
 func (c *Client) DeleteManagedSandbox(ctx context.Context, name string) error {
 	conn, err := c.controlConn()

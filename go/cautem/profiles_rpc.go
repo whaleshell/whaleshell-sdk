@@ -1,4 +1,4 @@
-package cauteum
+package cautem
 
 import (
 	"context"
@@ -6,11 +6,11 @@ import (
 	"strconv"
 	"strings"
 
-	controlv1 "github.com/cautem/cauteum-gateway/api/gen/cauteum/control/v1"
-	gc "github.com/cautem/cauteum-sdk/internal/gatewayclient"
+	controlv1 "github.com/cautem/cautem-gateway/api/gen/cautem/control/v1"
+	gc "github.com/cautem/cautem-sdk/internal/gatewayclient"
 )
 
-// ListProfiles and its scoped form use the curated Cauteum control API.
+// ListProfiles and its scoped form use the curated cautem control API.
 func (c *Client) ListProfiles(ctx context.Context) ([]gc.ProfileInfo, error) {
 	return c.ListProfilesScoped(ctx, "global", "")
 }

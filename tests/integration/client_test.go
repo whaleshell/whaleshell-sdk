@@ -6,7 +6,7 @@ import (
 	"net/http/httptest"
 	"testing"
 
-	"github.com/cautem/cauteum-sdk/go/cauteum"
+	"github.com/cautem/cautem-sdk/go/cautem"
 )
 
 func TestHealthBootstrapRemainsHTTP(t *testing.T) {
@@ -19,7 +19,7 @@ func TestHealthBootstrapRemainsHTTP(t *testing.T) {
 		_, _ = w.Write([]byte(`{"ok":true}`))
 	}))
 	defer srv.Close()
-	c := cauteum.New(srv.URL)
+	c := cautem.New(srv.URL)
 	hz, err := c.Healthz(context.Background())
 	if err != nil || hz["ok"] != true {
 		t.Fatalf("healthz=%v err=%v", hz, err)
@@ -27,7 +27,7 @@ func TestHealthBootstrapRemainsHTTP(t *testing.T) {
 }
 
 func TestRPCRequiresTokenBeforeDial(t *testing.T) {
-	c := cauteum.New("http://127.0.0.1:1")
+	c := cautem.New("http://127.0.0.1:1")
 	if _, err := c.List(context.Background()); err == nil {
 		t.Fatal("expected missing-token error")
 	}

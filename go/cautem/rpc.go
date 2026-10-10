@@ -1,4 +1,4 @@
-package cauteum
+package cautem
 
 import (
 	"context"
@@ -27,7 +27,7 @@ func (c bearerCredentials) GetRequestMetadata(context.Context, ...string) (map[s
 
 // openShellRPCConn creates the generated OpenShell transport for methods not
 // yet wrapped by the upstream Go facade. The host alias is injected by the
-// Cauteum CLI into sandbox proxy environments and is a trusted local route.
+// cautem CLI into sandbox proxy environments and is a trusted local route.
 func (c *Client) openShellRPCConn() (*grpc.ClientConn, error) {
 	c.rpcMu.Lock()
 	defer c.rpcMu.Unlock()
@@ -44,7 +44,7 @@ func (c *Client) openShellRPCConn() (*grpc.ClientConn, error) {
 		transport = credentials.NewTLS(&tls.Config{MinVersion: tls.VersionTLS12})
 	case "http":
 		host := strings.ToLower(endpoint.Hostname())
-		if !isLoopbackHost(host) && host != "host.cauteum.internal" {
+		if !isLoopbackHost(host) && host != "host.cautem.internal" {
 			return nil, fmt.Errorf("OpenShell RPC: unencrypted gRPC is allowed only for local gateway routes")
 		}
 		transport = insecure.NewCredentials()
@@ -88,7 +88,7 @@ func (c *Client) controlConn() (*grpc.ClientConn, error) {
 		transport = credentials.NewTLS(&tls.Config{MinVersion: tls.VersionTLS12})
 	case "http":
 		host := strings.ToLower(endpoint.Hostname())
-		if !isLoopbackHost(host) && host != "host.cauteum.internal" {
+		if !isLoopbackHost(host) && host != "host.cautem.internal" {
 			return nil, fmt.Errorf("gateway RPC: unencrypted gRPC is allowed only for local gateway routes")
 		}
 		transport = insecure.NewCredentials()
@@ -107,7 +107,7 @@ func (c *Client) controlConn() (*grpc.ClientConn, error) {
 }
 
 // openShellClient returns the pinned upstream OpenShell SDK client. Runtime
-// operations use this contract directly; Cauteum-specific views use the
+// operations use this contract directly; cautem-specific views use the
 // curated control.v1 contract.
 func (c *Client) openShellClient() (*openshell.Client, error) {
 	c.rpcMu.Lock()
