@@ -35,7 +35,7 @@ jobs:
         with:
           repository: cautem/cautem-gateway
           path: cautem-gateway
-          ref: release/v0.1.6
+          ref: v0.1.6
 
       - name: Configure Go workspace
         shell: bash
@@ -82,7 +82,7 @@ jobs:
         with:
           repository: cautem/cautem-gateway
           path: cautem-gateway
-          ref: release/v0.1.6
+          ref: v0.1.6
 
       - name: Configure Go workspace
         shell: bash
@@ -129,7 +129,7 @@ jobs:
         with:
           repository: cautem/cautem-gateway
           path: cautem-gateway
-          ref: release/v0.1.6
+          ref: v0.1.6
 
       - name: Configure Go workspace
         shell: bash
@@ -174,7 +174,7 @@ jobs:
         with:
           repository: cautem/cautem-gateway
           path: cautem-gateway
-          ref: release/v0.1.6
+          ref: v0.1.6
 
       - name: Configure Go workspace
         shell: bash
